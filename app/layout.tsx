@@ -68,7 +68,7 @@ export default function RootLayout({
         </nav>
         {children}
 
-        <footer className="mb-10">
+        <footer className="my-10">
           <p>&copy; {new Date().getFullYear()} </p>
         </footer>
       </body>

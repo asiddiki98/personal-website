@@ -1,5 +1,6 @@
 import Role from "@/components/Role";
 import Image from "next/image";
+import Icon from "@/components/Icon";
 export default function Home() {
   return (
     <main className="flex flex-col gap-5 relative max-w-custom flex-grow flex-shrink flex-basis-0 px-2">
@@ -52,7 +53,7 @@ export default function Home() {
       </p>
       <p>
         When not coding or delving into real estate, I enjoy hiking ⛰️ and
-        diving into a good book 📖, which help me return to my tech projects
+        diving into a good book 📖, which helps me return to my tech projects
         with renewed energy and creativity.
       </p>
 
@@ -62,18 +63,20 @@ export default function Home() {
         </a> */}
 
         <a
-          className="py-2 px-7 glossy-text glossy-border"
+          className="py-2 px-7 glossy-text glossy-border flex items-center gap-2"
           href="https://github.com/asiddiki98"
           target="_blank"
         >
+          <Icon name="github" />
           GitHub
         </a>
 
         <a
-          className="py-2 px-7 glossy-text glossy-border"
+          className="py-2 px-7 glossy-text glossy-border flex items-center gap-2"
           href="https://www.linkedin.com/in/azim-siddiki-3b505b207/"
           target="_blank"
         >
+          <Icon name="linkedin" />
           LinkedIn
         </a>
       </div>

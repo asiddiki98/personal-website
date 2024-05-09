@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0; /* Dark text for light background */
   --background-start-rgb: 255, 255, 255; /* Light background */
   --background-end-rgb: 214, 219, 220; /* Slightly darker shade for gradient */
+  --text-shadow: 0 0 1px rgba(0, 0, 0, 0.5); /* Text shadow for light text */
+
+  --gradient: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+  --color: #b21f1f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +17,14 @@
     --foreground-rgb: 228 228 231;
     --background-start-rgb: 24, 24, 27;
     --background-end-rgb: 24, 24, 27;
+    --text-shadow: none;
+    --gradient: linear-gradient(
+      to right,
+      #00f260,
+      #0575e6
+    ); /* Default gradient */
+
+    --color: #00f260;
   }
 }
 
@@ -20,12 +32,21 @@
   --foreground-rgb: 228 228 231;
   --background-start-rgb: 24, 24, 27;
   --background-end-rgb: 24, 24, 27;
+  --text-shadow: none;
+  --gradient: linear-gradient(to right, #00f260, #0575e6);
+
+  --color: #00f260;
 }
 
 .light {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 214, 219, 220;
+  --text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+  --gradient: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+
+  --color: #b21f1f;
 }
 
 body {
@@ -36,6 +57,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  height: 100%;
 }
 
 @layer utilities {
@@ -49,12 +71,32 @@ body {
 }
 
 .glossy-text {
-  background: linear-gradient(45deg, #7f7fd5, #86a8e7, #91eae4);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback: on some browsers, background-clip is not supported */
+  /* display: inline-block; */
+}
+
+.gold-text {
+  background: linear-gradient(45deg, #fedb37, #fdb931, #9f7928, #8a6e2f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; /* Fallback: on some browsers, background-clip is not supported */
   display: inline-block;
+  text-shadow: var(--text-shadow);
+}
+
+.silver-text {
+  background: linear-gradient(45deg, #e6e6e6, #d9d9d9, #b3b3b3, #a6a6a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback: on some browsers, background-clip is not supported */
+  display: inline-block;
+  text-shadow: var(--text-shadow);
 }
 
 :root {
@@ -98,7 +140,7 @@ body {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: linear-gradient(45deg, #7f7fd5, #86a8e7, #91eae4);
+  background: var(--gradient);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -107,18 +149,212 @@ body {
   left: 0;
 }
 
-.perspective {
-  perspective: 1000px;
+:root {
+  --gold-background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+
+  --silver-background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #e6e6e6 0%,
+      #d9d9d9 8%,
+      #b3b3b3 30%,
+      #a6a6a6 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #f2f2f2 8%,
+      #d9d9d9 25%,
+      #6f6f6f 62.5%,
+      #6f6f6f 100%
+    );
 }
 
-.token-face {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: lg; /* Tailwind utility for border radius */
-}
-
-.preserve-3d {
+#coin {
+  position: relative;
+  margin: 0 auto;
+  width: 6.5em;
+  height: 6.5em;
+  transition: transform 1s ease-in;
   transform-style: preserve-3d;
+  position: relative;
+}
+.gold {
+  background: var(--gold-background);
+  color: white;
+}
+.silver {
+  background: var(--silver-background);
+  color: white;
+}
+
+#coin div {
+  backface-visibility: hidden;
+}
+
+.side-b {
+  transform: rotateY(-180deg);
+}
+
+#coin.heads {
+  animation: flipHeads 0.5s ease-out forwards;
+}
+#coin.tails {
+  animation: flipTails 0.5s ease-out forwards;
+}
+
+@keyframes flipHeads {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes flipTails {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.gold:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * 6px);
+  left: calc(-1 * 6px);
+  height: calc(100% + 6px * 2);
+  width: calc(100% + 6px * 2);
+  background: var(--gold-background);
+  border-radius: 50%;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.silver:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * 6px);
+  left: calc(-1 * 6px);
+  height: calc(100% + 6px * 2);
+  width: calc(100% + 6px * 2);
+  background: var(--silver-background);
+  border-radius: 50%;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glossy-border {
+  position: relative;
+}
+.glossy-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: var(--gradient);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /* -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); */
+  /* -webkit-mask-composite: xor; */
+  mask-composite: exclude;
+}
+
+.gold-border {
+  position: relative;
+}
+.gold-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: var(--gold-background);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /* -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); */
+  /* -webkit-mask-composite: xor; */
+  mask-composite: exclude;
+}
+
+.silver-border {
+  position: relative;
+}
+
+.silver-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: var(--silver-background);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /* -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); */
+  /* -webkit-mask-composite: xor; */
+  mask-composite: exclude;
+}
+
+.gradient-shadow {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.gradient-shadow {
+  position: relative;
+  background: rgb(var(--background-start-rgb));
+}
+.gradient-shadow::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  transform: translate(-2px, -5px);
+  z-index: -1; /* place the element behind */
+  background: var(--gradient) /* your gradient here */;
+  filter: blur(10px); /* control the blur */
+}
+
+.glossy-svg {
+  color: var(--color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback: on some browsers, background-clip is not supported */
+  display: inline-block;
+}
+
+.gradient-background {
+  background: var(--gradient);
+}
+
+.bg-opposite-theme {
+  background: var(--foreground-rgb) !important;
 }

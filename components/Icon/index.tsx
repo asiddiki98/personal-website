@@ -1,9 +1,8 @@
 import Email from "./Email";
 import Moon from "./Moon";
 import Sun from "./Sun";
-
 interface IconProps {
-  name: "email" | "moon" | "sun";
+  name: "email" | "moon" | "sun" | "javascript" | "typescript";
 }
 
 export default function Icon({ name }: IconProps) {
@@ -14,6 +13,7 @@ export default function Icon({ name }: IconProps) {
       return <Moon />;
     case "sun":
       return <Sun />;
+
     default:
       return <></>;
   }

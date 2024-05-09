@@ -19,18 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <Head>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <body
-        className={`${inter.className} flex items-center mx-96 flex-col min-h-dvh justify-between`}
+        className={`${inter.className} flex items-center flex-col min-h-dvh justify-between`}
       >
-        <nav className="flex justify-between items-center mt-10 w-full  max-w-custom">
-          <span className="text-2xl">
-            {/* <a className="expanding-underline" href="/">
-              Azim Siddiki
-            </a> */}
+        <nav className="flex justify-between items-center mt-10 w-full  max-w-custom px-2">
+          <span className="md:text-2xl">
             <Link className="expanding-underline" href="/">
               Azim Siddiki
             </Link>
@@ -42,23 +39,25 @@ export default function RootLayout({
               </Link>
             </li>
             <li>
-              {/* <a className="expanding-underline" href="/projects">
-                Projects
-              </a> */}
               <Link className="expanding-underline" href="/projects">
                 Projects
               </Link>
             </li>
             <li>
-              <Link className="expanding-underline" href="/cv">
+              <Link
+                className="expanding-underline"
+                href="/Azims_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 CV
               </Link>
             </li>
             <li>
-              {/* <a className="expanding-underline" href="/contact">
-                <Icon name="email" />
-              </a> */}
-              <Link className="expanding-underline" href="/contact">
+              <Link
+                className="expanding-underline"
+                href="mailto:azimsiddiki@gmail.com"
+              >
                 <Icon name="email" />
               </Link>
             </li>

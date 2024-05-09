@@ -1,30 +1,54 @@
 "use client";
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 
 export default function SkillToken({
-  children,
   years,
+  name,
+  icon,
 }: Readonly<{
-  children: React.ReactNode;
   years: number;
+  name: string;
+  icon: string;
 }>) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [side, setSide] = useState("");
+
+  const flipHeads = () => {
+    setSide("heads");
+  };
+
+  const flipTails = () => {
+    setSide("tails");
+  };
 
   return (
-    <div className={`relative w-32 h-32 m-4 perspective`}>
-      <div
-        className={`w-full h-full absolute cursor-pointer transition-transform duration-700 transform ${
-          isFlipped ? "rotate-y-180" : ""
-        } preserve-3d`}
-        onClick={() => setIsFlipped(!isFlipped)}
-      >
-        <div className="token-face front bg-gray-200 flex items-center justify-center text-center">
-          {children}
+    <div
+      onMouseEnter={flipHeads}
+      onMouseLeave={flipTails}
+      className="p-8 flex flex-col gap-4 items-center justify-center"
+    >
+      <div id="coin" className={`${side} gradient-border`} key={+new Date()}>
+        <div
+          className={`${
+            years >= 3 ? "gold" : "silver"
+          } absolute text-center rounded-[50%] w-[100%] h-[100%] flex justify-center items-center`}
+        >
+          <h2>
+            <Icon icon={icon} width="3.5em" height="3.5rem" />
+          </h2>
         </div>
-        <div className="token-face back bg-blue-500 text-white flex items-center justify-center text-center rotate-y-180">
-          <span>{years} Years</span>
+        <div
+          className={`${
+            years >= 3 ? "gold" : "silver"
+          } side-b absolute text-center rounded-[50%]  w-[100%] h-[100%] flex justify-center items-center`}
+        >
+          <h2 className="glossy-text">{years}+ Years</h2>
         </div>
       </div>
+
+      <h2 className={`text-center ${years >= 3 ? "gold-text" : "silver-text"}`}>
+        {name}
+      </h2>
     </div>
   );
 }

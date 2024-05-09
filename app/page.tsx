@@ -2,7 +2,7 @@ import Role from "@/components/Role";
 import Image from "next/image";
 export default function Home() {
   return (
-    <main className="flex flex-col gap-5 relative max-w-custom flex-grow flex-shrink flex-basis-0">
+    <main className="flex flex-col gap-5 relative max-w-custom flex-grow flex-shrink flex-basis-0 px-2">
       <div className="flex justify-end">
         <Image
           src="/avatar.jpg"
@@ -10,12 +10,12 @@ export default function Home() {
           width={150}
           height={150}
           priority
-          className="w-36 h-36 rounded-full object-cover profile-image wiggle"
+          className="w-36 h-36 rounded-full object-cover profile-image wiggle glossy-border"
         />
       </div>
       <div className="gap-2">
-        <h3 className="text-2xl">Hello,</h3>
-        <h1 className="text-3xl">
+        <h3 className="text-xl lg:text-2xl">Hello 👋,</h3>
+        <h1 className="text-2xl lg:text-3xl">
           I am <Role />
         </h1>
       </div>
@@ -27,7 +27,11 @@ export default function Home() {
       </p>
       <p>
         After graduating from App Academy, I joined{" "}
-        <a className="t" href="https://www.stitch3d.io/" target="_blank">
+        <a
+          className="glossy-text"
+          href="https://www.stitch3d.io/"
+          target="_blank"
+        >
           {" "}
           Stitch3D
         </a>
@@ -37,7 +41,7 @@ export default function Home() {
       <p>
         On the side, I explore commercial real estate with{" "}
         <a
-          className="text-blue-500"
+          className="glossy-text"
           href="https://www.capriip.com/"
           target="_blank"
         >
@@ -52,30 +56,26 @@ export default function Home() {
         with renewed energy and creativity.
       </p>
 
-      <div className="flex flex-row gap-2 mt-10">
-        <span className="border-2 border-blue-500 rounded">
-          <a className="p-7 text-blue-500" href="/cv">
-            Resume
-          </a>
-        </span>
-        <span className="border-2 border-blue-500 rounded">
-          <a
-            className="p-7 text-blue-500"
-            href="https://www.github.com/azimsiddiki"
-            target="_blank"
-          >
-            GitHub
-          </a>
-        </span>
-        <span className="border-2 border-blue-500 rounded">
-          <a
-            className="p-7 text-blue-500"
-            href="https://www.linkedin.com/in/azim-siddiki/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-        </span>
+      <div className="flex flex-row gap-4 mt-10">
+        {/* <a className="py-2 px-7 glossy-text glossy-border" href="/cv">
+          Resume
+        </a> */}
+
+        <a
+          className="py-2 px-7 glossy-text glossy-border"
+          href="https://github.com/asiddiki98"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          className="py-2 px-7 glossy-text glossy-border"
+          href="https://www.linkedin.com/in/azim-siddiki-3b505b207/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
       </div>
     </main>
   );

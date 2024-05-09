@@ -1,0 +1,94 @@
+[
+  {
+    "name": "JavaScript",
+    "years": 3,
+    "icon": "devicon:javascript",
+    "type": "Languages"
+  },
+  {
+    "name": "TypeScript",
+    "years": 3,
+    "icon": "devicon:typescript",
+    "type": "Languages"
+  },
+  { "name": "Ruby", "years": 3, "icon": "devicon:ruby", "type": "Languages" },
+  { "name": "HTML", "years": 3, "icon": "devicon:html5", "type": "Languages" },
+  { "name": "CSS", "years": 3, "icon": "devicon:css3", "type": "Languages" },
+  { "name": "SQL", "years": 1, "icon": "carbon:sql", "type": "Languages" },
+  {
+    "name": "SQLite",
+    "years": 1,
+    "icon": "devicon:sqlite",
+    "type": "Languages"
+  },
+  { "name": "React", "years": 3, "icon": "logos:react", "type": "Libraries" },
+  { "name": "Redux", "years": 3, "icon": "logos:redux", "type": "Libraries" },
+  {
+    "name": "Node.js",
+    "years": 3,
+    "icon": "logos:nodejs-icon",
+    "type": "Frameworks"
+  },
+  {
+    "name": "Ruby on Rails",
+    "years": 2,
+    "icon": "mdi:language-ruby-on-rails",
+    "type": "Frameworks"
+  },
+  {
+    "name": "jQuery",
+    "years": 1,
+    "icon": "devicon:jquery",
+    "type": "Libraries"
+  },
+  {
+    "name": "Express",
+    "years": 3,
+    "icon": "devicon:express",
+    "type": "Frameworks"
+  },
+  {
+    "name": "Serverless",
+    "years": 3,
+    "icon": "vscode-icons:file-type-serverless",
+    "type": "Frameworks"
+  },
+  {
+    "name": "Next.js",
+    "years": 3,
+    "icon": "devicon:nextjs",
+    "type": "Frameworks"
+  },
+  {
+    "name": "Webpack",
+    "years": 3,
+    "icon": "devicon:webpack",
+    "type": "Libraries"
+  },
+  { "name": "Git", "years": 3, "icon": "devicon:git", "type": "Libraries" },
+  {
+    "name": "Heroku",
+    "years": 2,
+    "icon": "logos:heroku-icon",
+    "type": "Libraries"
+  },
+  { "name": "AWS", "years": 3, "icon": "logos:aws", "type": "Libraries" },
+  {
+    "name": "MongoDB",
+    "years": 3,
+    "icon": "devicon:mongodb",
+    "type": "Libraries"
+  },
+  {
+    "name": "PostgreSQL",
+    "years": 2,
+    "icon": "logos:postgresql",
+    "type": "Libraries"
+  },
+  {
+    "name": "DynamoDB",
+    "years": 2,
+    "icon": "simple-icons:amazondynamodb",
+    "type": "Libraries"
+  }
+]

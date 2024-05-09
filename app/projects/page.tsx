@@ -8,6 +8,7 @@ export default function Projects() {
           website="https://webflix-aa.herokuapp.com/#/"
           gif="/webflix.gif"
           name="Webflix"
+          unoptomized={true}
           stack={["React", "Ruby on Rails", "PostgreSQL"]}
           description="A Netflix clone that allows users to watch trailers and view information about movies."
         >
@@ -58,6 +59,7 @@ export default function Projects() {
         <Project
           website="https://asiddiki98.github.io/Dino-Might/"
           gif="/dinomight.gif"
+          unoptomized={true}
           name="Dino-Might"
           stack={["JavaScript", "HTML", "CSS"]}
           description="A game where the player controls a dinosaur that must jump over dynamite."

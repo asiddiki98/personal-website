@@ -16,7 +16,7 @@ export default function Role() {
 
   useEffect(() => {
     const currentText = roles[roleIndex];
-    const typeSpeed = deleting ? 100 : 200;
+    const typeSpeed = deleting ? 50 : 100;
 
     const handleType = () => {
       const nextLength = deleting ? role.length - 1 : role.length + 1;

@@ -354,7 +354,3 @@ body {
 .gradient-background {
   background: var(--gradient);
 }
-
-.bg-opposite-theme {
-  background: var(--foreground-rgb) !important;
-}

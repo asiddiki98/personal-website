@@ -6,7 +6,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Project
           website="https://webflix-aa.herokuapp.com/#/"
-          gif="https://media.giphy.com/media/DnbNAVVko4Lvu4o4O4/giphy.gif"
+          gif="/webflix.gif"
           name="Webflix"
           stack={["React", "Ruby on Rails", "PostgreSQL"]}
           description="A Netflix clone that allows users to watch trailers and view information about movies."
@@ -57,7 +57,7 @@ export default function Projects() {
         </Project>
         <Project
           website="https://asiddiki98.github.io/Dino-Might/"
-          gif="https://media.giphy.com/media/LVdQKHtxN9u2AD43d3/giphy.gif"
+          gif="/dinomight.gif"
           name="Dino-Might"
           stack={["JavaScript", "HTML", "CSS"]}
           description="A game where the player controls a dinosaur that must jump over dynamite."

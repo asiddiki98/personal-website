@@ -18,12 +18,10 @@ export default function Projects() {
               of media allowing for users to have a broad selection of movies to
               browse and watch.
             </li>
-            <br />
             <li>
               Leveraged polymorphic association to create reference for genres,
               in order to search and display movies by genre.
             </li>
-            <br />
             <li>
               Implemented a unique live search feature by improving efficiency
               and size of API service requests effectively reducing loading time

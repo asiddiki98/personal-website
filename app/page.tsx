@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <div className="gap-2">
         <h3 className="text-xl lg:text-2xl">Hello 👋,</h3>
-        <h1 className="text-2xl lg:text-3xl">
+        <h1 className="text-xl lg:text-3xl">
           I am <Role />
         </h1>
       </div>
@@ -48,20 +48,24 @@ export default function Home() {
         >
           Capri Industrial Partners
         </a>
-        . This hobby allows me to apply my analytical skills in a different
-        arena, focusing on strategic off-market transactions.
+        . This allows me to apply my analytical skills in a different arena,
+        focusing on strategic off-market transactions.
       </p>
       <p>
         When not coding or delving into real estate, I enjoy hiking ⛰️ and
         diving into a good book 📖, which helps me return to my tech projects
         with renewed energy and creativity.
       </p>
+      <p>
+        I am always looking for new opportunities to grow and learn, so feel
+        free to{" "}
+        <a className="glossy-text" href="mailto:azimsiddiki@gmail.com">
+          reach out
+        </a>{" "}
+        if you want to connect and build together! 🚀
+      </p>
 
       <div className="flex flex-row gap-4 mt-10">
-        {/* <a className="py-2 px-7 glossy-text glossy-border" href="/cv">
-          Resume
-        </a> */}
-
         <a
           className="py-2 px-7 glossy-text glossy-border flex items-center gap-2"
           href="https://github.com/asiddiki98"

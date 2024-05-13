@@ -6,6 +6,12 @@
     "type": "Languages"
   },
   {
+    "name": "Python",
+    "years": 1,
+    "icon": "devicon:python",
+    "type": "Languages"
+  },
+  {
     "name": "TypeScript",
     "years": 3,
     "icon": "devicon:typescript",

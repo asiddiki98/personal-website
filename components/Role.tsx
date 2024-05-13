@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 
 const roles = [
   "Azim",
+  "currently seeking opportunities",
+  "a Software Engineer",
   "a Full Stack Developer",
-  "a Front End Developer",
-  "a Back End Developer",
   "a UI/UX Designer",
 ];
 

@@ -22,9 +22,8 @@ export default function Home() {
       </div>
 
       <p>
-        While attending Hunter University 🏫 I decided to fully immerse myself
-        in programming and enrolled in App Academy, a rigorous 1000+ hour coding
-        bootcamp with a less than 3% acceptance rate.
+        In 2020 decided to fully immerse myself in programming and enrolled in
+        App Academy, a rigorous 1000+ hour coding bootcamp.
       </p>
       <p>
         After graduating from App Academy, I joined{" "}
@@ -56,6 +55,7 @@ export default function Home() {
         diving into a good book 📖, which helps me return to my tech projects
         with renewed energy and creativity.
       </p>
+
       <p>
         I am always looking for new opportunities to grow and learn, so feel
         free to{" "}

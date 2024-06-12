@@ -46,7 +46,7 @@ export default function RootLayout({
             <li>
               <Link
                 className="expanding-underline"
-                href="/resume.pdf"
+                href="/azims-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -1,13 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const roles = [
-  "Azim",
-  "currently seeking opportunities",
-  "a Software Engineer",
-  "a Full Stack Developer",
-  "a UI/UX Designer",
-];
+const roles = ["Azim", "a Software Engineer", "a Full-Stack Web Developer"];
 
 export default function Role() {
   const [role, setRole] = useState("");

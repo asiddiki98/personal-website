@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
       <p>
-        In 2020 decided to fully immerse myself in programming and enrolled in
+        In 2020 I decided to fully immerse myself in programming and enrolled in
         App Academy, a rigorous 1000+ hour coding bootcamp.
       </p>
       <p>
@@ -52,8 +52,7 @@ export default function Home() {
       </p>
       <p>
         When not coding or delving into real estate, I enjoy hiking ⛰️ and
-        diving into a good book 📖, which helps me return to my tech projects
-        with renewed energy and creativity.
+        diving into a good book 📖.
       </p>
 
       <p>

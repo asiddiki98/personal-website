@@ -39,20 +39,21 @@ export default function Home() {
         award-winning 3D file management platform.
       </p>
       <p>
-        On the side, I explore commercial real estate with{" "}
+        Currently I am helping build SansWrite&apos;s next-generation compliance
+        monitoring software at{" "}
         <a
           className="glossy-text"
-          href="https://www.capriip.com/"
+          href="http://outliertech.com/"
           target="_blank"
         >
-          Capri Industrial Partners
+          Outlier Technoligies.
         </a>
-        . This allows me to apply my analytical skills in a different arena,
-        focusing on strategic off-market transactions.
       </p>
       <p>
-        When not coding or delving into real estate, I enjoy hiking ⛰️ and
-        diving into a good book 📖.
+        When I&apos;m not coding, I enjoy hiking ⛰️ and getting lost in a good
+        book 📖. Lake Minnewaska is my favorite spot so far, and I&apos;m
+        working through the <em>A Song of Ice and Fire</em> series{"—"}even if
+        George R. R. Martin never finishes it.
       </p>
 
       <p>

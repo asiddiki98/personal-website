@@ -52,8 +52,8 @@ export default function Home() {
       <p>
         When I&apos;m not coding, I enjoy hiking ⛰️ and getting lost in a good
         book 📖. Lake Minnewaska is my favorite spot so far, and I&apos;m
-        working through the <em>A Song of Ice and Fire</em> series{"—"}even if
-        George R. R. Martin never finishes it.
+        working through the <em>A Song of Ice and Fire</em> series{"—"}even
+        though George R. R. Martin will never finish it 😪.
       </p>
 
       <p>
